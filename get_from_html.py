@@ -50,9 +50,9 @@ def get_images_from_html(html, base_url):
 
 def extract_page_data(html, page_url):
     page_data = {}
-    page_data['url'] = page_url
+    page_data['page_url'] = page_url
     page_data['h1'] = get_h1_from_html(html)
     page_data['first_paragraph'] = get_first_paragraph_from_html(html)
-    page_data['outgoing_links'] = get_urls_from_html(html, page_url)
+    page_data['outgoing_link_urls'] = get_urls_from_html(html, page_url)
     page_data['image_urls'] = get_images_from_html(html, page_url)
     return page_data
